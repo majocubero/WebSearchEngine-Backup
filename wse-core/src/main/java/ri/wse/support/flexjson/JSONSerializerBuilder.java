@@ -2,7 +2,7 @@ package ri.wse.support.flexjson;
 
 
 import flexjson.JSONSerializer;
-import ri.wse.model.Result;
+import ri.wse.model.QueryResult;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -114,7 +114,7 @@ public class JSONSerializerBuilder {
         tempIncludes.add("relevantData");
         tempIncludes.add("symptomsText");
 
-        excludes.addAll(JSONSerializerBuilder.getExcludesForObject(Result.class, "manager", tempIncludes));
+        excludes.addAll(JSONSerializerBuilder.getExcludesForObject(QueryResult.class, "manager", tempIncludes));
 
         serializer.setExcludes(excludes);
 
